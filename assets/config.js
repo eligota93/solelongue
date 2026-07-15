@@ -1,9 +1,9 @@
 window.SOLE_CONFIG = {
   phoneDisplay: "",
   phoneLink: "",
-  whatsappNumber: "",
-  mapsUrl: "https://share.google/ViCk7NRj1AB0xCGAn",
-  instagramUrl: "https://www.instagram.com/soleshengjin/",
-  openingHoursSq: "",
-  openingHoursEn: ""
+  whatsapp: "",
+  instagram: "https://www.instagram.com/soleshengjin/",
+  maps: "https://www.google.com/maps/search/?api=1&query=Fran%20Ivanaj%2C%20Sh%C3%ABngjin%2C%20Albania",
+  openingHoursAL: "",
+  openingHoursEN: ""
 };

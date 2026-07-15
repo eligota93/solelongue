@@ -1,16 +1,261 @@
-const C=window.SOLE_CONFIG||{};let lang=localStorage.getItem('soleLang')||'sq';
-const T={sq:{navHome:'Ballina',navExperience:'Eksperienca',navMenu:'Menuja',navGallery:'Galeria',navReserve:'Rezervimi',navContact:'Kontakti',reserveTable:'Rezervo tavolinën',location:'Vendndodhja',heroEyebrow:'LOUNGE • KUZHINË MESDHETARE • SHËNGJIN',heroTitle:'Shije mesdhetare,<br>kokteje dhe perëndime.',heroCopy:'Një eksperiencë bregdetare në Shëngjin, nga dreka pranë detit deri te atmosfera e mbrëmjes.',viewMenu:'Shiko menunë',medCuisine:'Kuzhinë mesdhetare',cocktailLounge:'Kokteje dhe atmosferë lounge',experienceEyebrow:'EKSPERIENCA SOLÉ',experienceTitle:'Përjeto Solé',experienceCopy:'Solé Lounge bashkon kuzhinën mesdhetare, koktejet, perëndimin dhe atmosferën e mbrëmjes në një destinacion të vetëm në Shëngjin.',point1:'Kuzhinë mesdhetare',point2:'Kokteje të përgatitura me kujdes',point3:'Atmosferë nga perëndimi deri në mbrëmje',featuredEyebrow:'SHIJE NGA MENUJA',featuredTitle:'Pjata për t’u shijuar dhe ndarë.',f1:'Krudo premium deti',f2:'Mix djathërash dhe proshutash',f3:'Tacos me karkaleca',seeMenu:'Shiko në menu',menuEyebrow:'MENUJA SOLÉ',menuTitle:'Shije mesdhetare, pizza dhe pjata për t’u ndarë.',allergy:'Ju lutemi informoni stafin për çdo alergji ose intolerancë ushqimore përpara porosisë.',sunsetEyebrow:'PERËNDIMI NË SOLÉ',sunsetTitle:'Nga perëndimi në mbrëmje',sunsetCopy:'Filloni me ushqim pranë detit dhe vazhdoni me kokteje, muzikë dhe atmosferën e Solé Lounge.',reserveSunset:'Rezervo për perëndim',nightEyebrow:'SOLÉ PAS PERËNDIMIT',nightTitle:'Nga darka te atmosfera e mbrëmjes.',nightCopy:'Ndërsa perëndon dielli, Solé Lounge transformohet në një hapësirë me muzikë, kokteje dhe energji bregdetare.',galleryEyebrow:'GALERIA',galleryTitle:'Shije, perëndime dhe net në Solé.',reservationEyebrow:'REZERVIMI',reservationTitle:'Rezervo tavolinën tënde.',reservationCopy:'Plotësoni të dhënat dhe dërgoni kërkesën tuaj direkt te Solé Lounge përmes WhatsApp-it.',fullName:'Emri dhe mbiemri',phone:'Numri i telefonit',date:'Data',time:'Ora',guests:'Numri i personave',seating:'Preferenca e tavolinës',message:'Mesazhi',seatNone:'Nuk kam preferencë',seatLounge:'Ambient lounge',seatSea:'Pranë pamjes së detit',seatInside:'Ambient i brendshëm',sendWhatsapp:'Dërgo kërkesën në WhatsApp',confirmation:'Rezervimi konsiderohet i konfirmuar vetëm pasi të merrni konfirmim nga Solé Lounge.',contactEyebrow:'KONTAKTI',contactTitle:'Na gjeni në Shëngjin.',address:'Adresa',hours:'Orari',openMaps:'Hap në Google Maps',viewInstagram:'Shiko Instagramin',footerCopy:'Kuzhinë mesdhetare, kokteje, perëndime dhe atmosferë lounge pranë detit në Shëngjin.',rights:'Të gjitha të drejtat e rezervuara.',call:'Telefono',maps:'Harta',reserveShort:'Rezervo'},en:{navHome:'Home',navExperience:'Experience',navMenu:'Menu',navGallery:'Gallery',navReserve:'Reservations',navContact:'Contact',reserveTable:'Reserve a Table',location:'Location',heroEyebrow:'LOUNGE • MEDITERRANEAN CUISINE • SHËNGJIN',heroTitle:'Mediterranean flavors,<br>cocktails and sunsets.',heroCopy:'A coastal experience in Shëngjin, from seaside dining to the atmosphere of the evening.',viewMenu:'View the Menu',medCuisine:'Mediterranean cuisine',cocktailLounge:'Cocktails and lounge atmosphere',experienceEyebrow:'THE SOLÉ EXPERIENCE',experienceTitle:'Experience Solé',experienceCopy:'Solé Lounge brings Mediterranean cuisine, cocktails, sunsets and evening atmosphere together in one destination in Shëngjin.',point1:'Mediterranean cuisine',point2:'Carefully crafted cocktails',point3:'Atmosphere from sunset into the night',featuredEyebrow:'A TASTE OF THE MENU',featuredTitle:'Dishes made to enjoy and share.',f1:'Premium Seafood Crudo',f2:'Cheese & Charcuterie Board',f3:'Shrimp Tacos',seeMenu:'View in Menu',menuEyebrow:'THE SOLÉ MENU',menuTitle:'Mediterranean flavors, pizza and dishes made for sharing.',allergy:'Please inform our staff about any food allergies or intolerances before ordering.',sunsetEyebrow:'SUNSET AT SOLÉ',sunsetTitle:'From Sunset into the Night',sunsetCopy:'Begin with food by the sea and continue with cocktails, music and the atmosphere of Solé Lounge.',reserveSunset:'Reserve for Sunset',nightEyebrow:'SOLÉ AFTER SUNSET',nightTitle:'From dinner into the evening atmosphere.',nightCopy:'As the sun sets, Solé Lounge transforms into a space filled with music, cocktails and coastal energy.',galleryEyebrow:'GALLERY',galleryTitle:'Flavors, sunsets and nights at Solé.',reservationEyebrow:'RESERVATIONS',reservationTitle:'Reserve your table.',reservationCopy:'Enter your details and send your request directly to Solé Lounge through WhatsApp.',fullName:'Full Name',phone:'Phone Number',date:'Date',time:'Time',guests:'Number of Guests',seating:'Seating Preference',message:'Message',seatNone:'No preference',seatLounge:'Lounge area',seatSea:'Near the sea view',seatInside:'Indoor area',sendWhatsapp:'Send Request on WhatsApp',confirmation:'Your reservation is confirmed only after receiving confirmation from Solé Lounge.',contactEyebrow:'CONTACT',contactTitle:'Find us in Shëngjin.',address:'Address',hours:'Opening hours',openMaps:'Open in Google Maps',viewInstagram:'View Instagram',footerCopy:'Mediterranean cuisine, cocktails, sunsets and a coastal lounge atmosphere in Shëngjin.',rights:'All rights reserved.',call:'Call',maps:'Directions',reserveShort:'Reserve'}};
-const aperitiv=[['Krudo premium deti','Premium Seafood Crudo','5,000 L'],['Mix djathërash dhe proshutash','Cheese & Charcuterie Board','2,500 L'],['Të arta dhe krokante nga deti','Golden & Crispy Seafood','1,800 L'],['Tacos me karkaleca','Shrimp Tacos','1,500 L'],['Mix pule krokante','Crispy Chicken Mix','1,500 L'],['Brusketa me salmon gravlax dhe Philadelphia','Gravlax Salmon & Philadelphia Bruschetta','1,000 L'],['Brusketa me açuge të marinuara dhe krem djathi','Marinated Anchovy & Cream Cheese Bruschetta','1,000 L'],['Patate me tartuf dhe Parmigiano','Truffle & Parmesan Fries','600 L'],['Patate të skuqura','French Fries','400 L']];
-const pizza=[['Margherita','Margherita','550 L'],['Proshutë','Ham Pizza','700 L'],['Vegjetariane','Vegetarian Pizza','700 L'],['Proshutë dhe sallam','Ham & Salami Pizza','750 L'],['Diavola','Spicy Salami Pizza','750 L'],['Kapriçioze','Capricciosa','750 L'],['Katër stinët','Four Seasons Pizza','750 L'],['Ton','Tuna Pizza','750 L'],['Katër djathërat','Four Cheese Pizza','800 L'],['Elegance','Elegance','1,000 L','Rukola, prosciutto crudo, domate qershi dhe Grana','Arugula, prosciutto crudo, cherry tomatoes and Grana'],['Meravigliosa','Meravigliosa','1,000 L','Mozzarella, tartuf, prosciutto crudo dhe Gorgonzola','Mozzarella, truffle, prosciutto crudo and Gorgonzola'],['Kristi','Kristi','1,000 L','Sallam pikant, misër, speca, krem tartufi dhe rukola','Spicy salami, corn, peppers, truffle cream and arugula']];
-function renderMenus(){const render=(arr)=>arr.map(x=>`<article class="menu-item"><div class="menu-top"><h4>${lang==='sq'?x[0]:x[1]}</h4><span class="menu-price">${x[2]}</span></div><p class="menu-en">${lang==='sq'?x[1]:x[0]}</p>${x[3]?`<p class="menu-desc">${lang==='sq'?x[3]:x[4]}</p>`:''}</article>`).join('');document.querySelector('#aperitivList').innerHTML=render(aperitiv);document.querySelector('#pizzaList').innerHTML=render(pizza)}
-function applyLang(){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const v=T[lang][el.dataset.i18n];if(v!==undefined)el.innerHTML=v});document.querySelectorAll('.lang-toggle').forEach(b=>{const s=b.querySelectorAll('span');s[0].classList.toggle('active',lang==='sq');s[2].classList.toggle('active',lang==='en')});document.title=lang==='sq'?'Solé Lounge Shëngjin | Kuzhinë Mesdhetare, Pizza dhe Kokteje':'Solé Lounge Shëngjin | Mediterranean Cuisine, Pizza and Cocktails';document.querySelector('meta[name="description"]').content=lang==='sq'?'Përjetoni Solé Lounge në Shëngjin me kuzhinë mesdhetare, seafood, pizza, kokteje, perëndime dhe atmosferë lounge pranë detit.':'Experience Solé Lounge in Shëngjin with Mediterranean cuisine, seafood, pizza, cocktails, sunsets and a coastal lounge atmosphere.';renderMenus();document.querySelector('#hoursDisplay').textContent=(lang==='sq'?C.openingHoursSq:C.openingHoursEn)||'—'}
-document.querySelectorAll('.lang-toggle').forEach(b=>b.addEventListener('click',()=>{lang=lang==='sq'?'en':'sq';localStorage.setItem('soleLang',lang);applyLang()}));
-const header=document.querySelector('#siteHeader');addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
-const menu=document.querySelector('#mobileMenu'),toggle=document.querySelector('.menu-toggle');function closeMenu(){menu.classList.remove('open');menu.setAttribute('aria-hidden','true');toggle.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')}toggle.onclick=()=>{menu.classList.add('open');menu.setAttribute('aria-hidden','false');toggle.setAttribute('aria-expanded','true');document.body.classList.add('menu-open')};document.querySelector('.menu-close').onclick=closeMenu;menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();closeLightbox()}});
-document.querySelectorAll('.menu-tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.menu-tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelector('#'+b.dataset.target).scrollIntoView({behavior:'smooth',block:'start'})});
-const images=['ig_a1','ig_a3','ig_a4','ig_b3','ig_b6','ig_b7','ig_b8','ig_b9','ig_b10','ig_b11','ig_b12','ig_b13','ig_b14','ig_b15'];const full=images.map(x=>'assets/images/'+x+'.webp');const track=document.querySelector('#marqueeTrack');track.innerHTML=[...full,...full].map((s,i)=>`<img src="${s}" alt="Moment nga Solé Lounge" loading="lazy" data-index="${i%full.length}">`).join('');const grid=document.querySelector('#galleryGrid');grid.innerHTML=full.slice(0,12).map((s,i)=>`<button type="button" data-index="${i}" aria-label="Hap fotografinë ${i+1}"><img src="${s}" alt="Moment nga Solé Lounge" loading="lazy"></button>`).join('');
-const lb=document.querySelector('#lightbox'),lbImg=lb.querySelector('img'),counter=lb.querySelector('.lightbox-counter');let idx=0,startX=0;function openLightbox(i){idx=i;lbImg.src=full[idx];counter.textContent=`${idx+1} / ${full.length}`;lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.classList.add('lightbox-open')}function closeLightbox(){lb.classList.remove('open');lb.setAttribute('aria-hidden','true');document.body.classList.remove('lightbox-open')}function move(d){idx=(idx+d+full.length)%full.length;openLightbox(idx)};grid.addEventListener('click',e=>{const b=e.target.closest('button');if(b)openLightbox(+b.dataset.index)});track.addEventListener('click',e=>{if(e.target.matches('img'))openLightbox(+e.target.dataset.index)});lb.querySelector('.lightbox-close').onclick=closeLightbox;lb.querySelector('.lightbox-prev').onclick=()=>move(-1);lb.querySelector('.lightbox-next').onclick=()=>move(1);lb.addEventListener('click',e=>{if(e.target===lb)closeLightbox()});lb.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-startX;if(Math.abs(d)>45)move(d>0?-1:1)},{passive:true});addEventListener('keydown',e=>{if(lb.classList.contains('open')&&e.key==='ArrowLeft')move(-1);if(lb.classList.contains('open')&&e.key==='ArrowRight')move(1)});
-function setLinks(){['mobileInstagram','contactInstagram','instagramButton','footerInstagram'].forEach(id=>document.querySelector('#'+id).href=C.instagramUrl);['mobileMaps','mapsButton','mapAction'].forEach(id=>document.querySelector('#'+id).href=C.mapsUrl);document.querySelector('#phoneDisplay').textContent=C.phoneDisplay||'—';document.querySelector('#whatsappDisplay').textContent=C.phoneDisplay||'—';if(!C.mapsUrl)document.querySelectorAll('#mobileMaps,#mapsButton,#mapAction').forEach(x=>x.classList.add('no-link'))}
-const callAction=document.querySelector('#callAction');callAction.onclick=()=>{if(C.phoneLink)location.href='tel:'+C.phoneLink;else alert(lang==='sq'?'Numri i telefonit nuk është publikuar ende.':'The phone number has not been published yet.')};
-document.querySelector('#reservationForm').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget,status=document.querySelector('#formStatus');if(!f.reportValidity())return;if(!C.whatsappNumber){status.textContent=lang==='sq'?'Numri i WhatsApp-it nuk është publikuar ende. Formulari është gati sapo të shtohet numri.':'The WhatsApp number has not been published yet. The form is ready once the number is added.';return}const d=Object.fromEntries(new FormData(f));const seatText=f.elements.seating.options[f.elements.seating.selectedIndex].text;const msg=lang==='sq'?`Përshëndetje Solé Lounge,\n\nDëshiroj të bëj një kërkesë për rezervim.\n\nEmri dhe mbiemri: ${d.name}\nNumri i telefonit: ${d.phone}\nData: ${d.date}\nOra: ${d.time}\nNumri i personave: ${d.guests}\nPreferenca e tavolinës: ${seatText}\nMesazhi: ${d.message||'-'}\n\nJu lutem më konfirmoni disponueshmërinë. Faleminderit.`:`Hello Solé Lounge,\n\nI would like to request a table reservation.\n\nFull name: ${d.name}\nPhone number: ${d.phone}\nDate: ${d.date}\nTime: ${d.time}\nNumber of guests: ${d.guests}\nSeating preference: ${seatText}\nMessage: ${d.message||'-'}\n\nPlease confirm availability. Thank you.`;open(`https://wa.me/${C.whatsappNumber}?text=${encodeURIComponent(msg)}`,'_blank','noopener')});
-document.querySelector('#year').textContent=new Date().getFullYear();setLinks();applyLang();
+(() => {
+  const config = window.SOLE_CONFIG || {};
+  const root = document.documentElement;
+  let language = localStorage.getItem('sole-language') || 'al';
+
+  const menuData = {
+    sharing: {
+      image: 'assets/images/ig_a1.webp',
+      alt: { al: 'Përgatitje në Solé Lounge', en: 'Preparation at Solé Lounge' },
+      items: [
+        ['Krudo premium deti','Premium Seafood Crudo','5,000 L'],
+        ['Mix djathërash dhe proshutash','Cheese & Charcuterie Board','2,500 L'],
+        ['Të arta dhe krokante nga deti','Golden & Crispy Seafood','1,800 L'],
+        ['Tacos me karkaleca','Shrimp Tacos','1,500 L'],
+        ['Mix pule krokante','Crispy Chicken Mix','1,500 L'],
+        ['Brusketa me salmon gravlax dhe Philadelphia','Gravlax Salmon & Philadelphia Bruschetta','1,000 L'],
+        ['Brusketa me açuge të marinuara dhe krem djathi','Marinated Anchovy & Cream Cheese Bruschetta','1,000 L'],
+        ['Patate me tartuf dhe Parmigiano','Truffle & Parmesan Fries','600 L'],
+        ['Patate të skuqura','French Fries','400 L']
+      ]
+    },
+    pizza: {
+      image: 'assets/images/ig_b9.webp',
+      alt: { al: 'Atmosferë gastronomike në Solé Lounge', en: 'Dining atmosphere at Solé Lounge' },
+      items: [
+        ['Margherita','Margherita','550 L'],
+        ['Proshutë','Ham Pizza','700 L'],
+        ['Vegjetariane','Vegetarian Pizza','700 L'],
+        ['Proshutë dhe sallam','Ham & Salami Pizza','750 L'],
+        ['Diavola','Spicy Salami Pizza','750 L'],
+        ['Kapriçioze','Capricciosa','750 L'],
+        ['Katër stinët','Four Seasons Pizza','750 L'],
+        ['Ton','Tuna Pizza','750 L'],
+        ['Katër djathërat','Four Cheese Pizza','800 L'],
+        ['Elegance','Elegance','1,000 L','Rukola, prosciutto crudo, domate qershi dhe Grana','Arugula, prosciutto crudo, cherry tomatoes and Grana'],
+        ['Meravigliosa','Meravigliosa','1,000 L','Mozzarella, tartuf, prosciutto crudo dhe Gorgonzola','Mozzarella, truffle, prosciutto crudo and Gorgonzola'],
+        ['Kristi','Kristi','1,000 L','Sallam pikant, misër, speca, krem tartufi dhe rukola','Spicy salami, corn, peppers, truffle cream and arugula']
+      ]
+    }
+  };
+
+  let activeCategory = 'sharing';
+
+  function applyLanguage() {
+    root.lang = language === 'al' ? 'sq' : 'en';
+    document.querySelectorAll('[data-al][data-en]').forEach(el => {
+      el.textContent = el.dataset[language];
+    });
+    document.querySelectorAll('.lang-toggle').forEach(toggle => {
+      const spans = toggle.querySelectorAll('span');
+      spans.forEach(span => span.classList.toggle('active', span.textContent.trim().toLowerCase() === language));
+    });
+    document.title = language === 'al' ? 'Solé Lounge Shëngjin' : 'Solé Lounge Shëngjin | Mediterranean Lounge';
+    renderMenu(activeCategory);
+    applyConfigText();
+  }
+
+  document.querySelectorAll('.lang-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      language = language === 'al' ? 'en' : 'al';
+      localStorage.setItem('sole-language', language);
+      applyLanguage();
+    });
+  });
+
+  function renderMenu(category) {
+    activeCategory = category;
+    const menu = menuData[category];
+    const holder = document.getElementById('menuContent');
+    if (!holder) return;
+    const items = menu.items.map(item => {
+      const main = language === 'al' ? item[0] : item[1];
+      const secondary = language === 'al' ? item[1] : item[0];
+      const ingredients = language === 'al' ? item[3] : item[4];
+      return `<article class="menu-item">
+        <div>
+          <p class="menu-item-name">${main}</p>
+          ${secondary && secondary !== main ? `<p class="menu-item-en">${secondary}</p>` : ''}
+          ${ingredients ? `<p class="menu-item-ingredients">${ingredients}</p>` : ''}
+        </div>
+        <span class="menu-price">${item[2]}</span>
+      </article>`;
+    }).join('');
+    holder.innerHTML = `<figure class="menu-category-image"><img src="${menu.image}" alt="${menu.alt[language]}" loading="lazy"><figcaption>${category === 'sharing' ? 'APERITIV & SHARING' : 'PIZZA'}</figcaption></figure><div class="menu-list">${items}</div>`;
+    document.querySelectorAll('.menu-tab').forEach(tab => {
+      const active = tab.dataset.category === category;
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-selected', String(active));
+    });
+  }
+
+  document.querySelectorAll('.menu-tab').forEach(tab => tab.addEventListener('click', () => renderMenu(tab.dataset.category)));
+
+  const header = document.getElementById('siteHeader');
+  const setHeader = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  addEventListener('scroll', setHeader, { passive: true });
+  setHeader();
+
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuClose = document.querySelector('.menu-close');
+  function openMenu(open) {
+    mobileMenu.classList.toggle('open', open);
+    mobileMenu.setAttribute('aria-hidden', String(!open));
+    menuToggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+  }
+  menuToggle.addEventListener('click', () => openMenu(true));
+  menuClose.addEventListener('click', () => openMenu(false));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => openMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') { openMenu(false); closeLightbox(); } });
+
+  const heroSlides = [...document.querySelectorAll('.hero-slide')];
+  const progress = document.querySelector('.hero-progress');
+  let heroIndex = 0;
+  let heroTimer;
+  heroSlides.forEach((_, i) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.ariaLabel = `Slide ${i + 1}`;
+    button.addEventListener('click', () => setHero(i));
+    progress.append(button);
+  });
+  const progressButtons = [...progress.children];
+  function setHero(index) {
+    clearInterval(heroTimer);
+    heroIndex = (index + heroSlides.length) % heroSlides.length;
+    heroSlides.forEach((slide, i) => slide.classList.toggle('active', i === heroIndex));
+    progressButtons.forEach((button, i) => {
+      button.classList.remove('active');
+      void button.offsetWidth;
+      button.classList.toggle('active', i === heroIndex);
+    });
+    heroTimer = setInterval(() => setHero(heroIndex + 1), 4800);
+  }
+  let heroTouchX = 0;
+  document.querySelector('.hero').addEventListener('touchstart', e => heroTouchX = e.changedTouches[0].clientX, {passive:true});
+  document.querySelector('.hero').addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - heroTouchX;
+    if (Math.abs(diff) > 50) setHero(heroIndex + (diff < 0 ? 1 : -1));
+  }, {passive:true});
+  setHero(0);
+
+  const nightSlides = [...document.querySelectorAll('.night-slide')];
+  let nightIndex = 0;
+  setInterval(() => {
+    nightSlides[nightIndex].classList.remove('active');
+    nightIndex = (nightIndex + 1) % nightSlides.length;
+    nightSlides[nightIndex].classList.add('active');
+    const bar = document.querySelector('.night-progress');
+    bar.style.animation = 'none';
+    void bar.offsetWidth;
+    bar.style.animation = '';
+  }, 3800);
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  function applyConfigLinks() {
+    document.querySelectorAll('[data-config-link="instagram"]').forEach(a => {
+      a.href = config.instagram || '#'; a.target = '_blank'; a.rel = 'noopener';
+    });
+    document.querySelectorAll('[data-config-link="maps"]').forEach(a => {
+      a.href = config.maps || '#'; a.target = '_blank'; a.rel = 'noopener';
+    });
+    const phoneBar = document.querySelector('.bottom-phone');
+    if (config.phoneLink) {
+      phoneBar.href = `tel:${config.phoneLink}`;
+      phoneBar.removeAttribute('aria-disabled');
+    } else {
+      phoneBar.href = config.instagram || '#';
+      phoneBar.target = '_blank';
+      phoneBar.querySelector('span:last-child').dataset.al = 'Instagram';
+      phoneBar.querySelector('span:last-child').dataset.en = 'Instagram';
+    }
+  }
+
+  function applyConfigText() {
+    const phone = document.querySelector('.config-phone');
+    if (phone && config.phoneDisplay) { phone.hidden = false; phone.textContent = config.phoneDisplay; }
+    const hours = document.querySelector('.config-hours');
+    const value = language === 'al' ? config.openingHoursAL : config.openingHoursEN;
+    if (hours && value) { hours.hidden = false; hours.textContent = value; }
+    else if (hours) hours.hidden = true;
+  }
+
+  applyConfigLinks();
+  applyLanguage();
+
+  const dateInput = document.querySelector('input[type="date"]');
+  if (dateInput) dateInput.min = new Date().toISOString().slice(0,10);
+
+  const form = document.getElementById('reservationForm');
+  const formStatus = document.getElementById('formStatus');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const alMessage = `Përshëndetje Solé Lounge,\n\nDëshiroj të bëj një kërkesë për rezervim.\n\nEmri dhe mbiemri: ${data.get('name')}\nNumri i telefonit: ${data.get('phone')}\nData: ${data.get('date')}\nOra: ${data.get('time')}\nNumri i personave: ${data.get('guests')}\nPreferenca e tavolinës: ${data.get('preference')}\nMesazhi: ${data.get('message') || '-'}\n\nJu lutem më konfirmoni disponueshmërinë. Faleminderit.`;
+    const enMessage = `Hello Solé Lounge,\n\nI would like to request a table reservation.\n\nFull name: ${data.get('name')}\nPhone number: ${data.get('phone')}\nDate: ${data.get('date')}\nTime: ${data.get('time')}\nNumber of guests: ${data.get('guests')}\nSeating preference: ${data.get('preference')}\nMessage: ${data.get('message') || '-'}\n\nPlease confirm availability. Thank you.`;
+    const message = language === 'al' ? alMessage : enMessage;
+    if (config.whatsapp) {
+      window.open(`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      formStatus.textContent = language === 'al' ? 'Kërkesa po hapet në WhatsApp.' : 'Your request is opening in WhatsApp.';
+    } else {
+      try { await navigator.clipboard.writeText(message); } catch (_) {}
+      formStatus.textContent = language === 'al'
+        ? 'Mesazhi u kopjua. Numri i WhatsApp-it duhet të shtohet para publikimit.'
+        : 'The message was copied. The WhatsApp number must be added before publishing.';
+      if (config.instagram) setTimeout(() => window.open(config.instagram, '_blank', 'noopener'), 600);
+    }
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+  const lightboxCount = lightbox.querySelector('.lightbox-count');
+  const galleryButtons = [...document.querySelectorAll('#galleryGrid button')];
+  const galleryImages = galleryButtons.map(button => ({ src: button.querySelector('img').src, alt: button.querySelector('img').alt }));
+  let lightboxIndex = 0;
+  function showLightbox(index) {
+    lightboxIndex = (index + galleryImages.length) % galleryImages.length;
+    lightboxImage.src = galleryImages[lightboxIndex].src;
+    lightboxImage.alt = galleryImages[lightboxIndex].alt;
+    lightboxCount.textContent = `${lightboxIndex + 1} / ${galleryImages.length}`;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.classList.add('lightbox-open');
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden','true');
+    document.body.classList.remove('lightbox-open');
+  }
+  galleryButtons.forEach((button, i) => button.addEventListener('click', () => showLightbox(i)));
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-prev').addEventListener('click', () => showLightbox(lightboxIndex - 1));
+  lightbox.querySelector('.lightbox-next').addEventListener('click', () => showLightbox(lightboxIndex + 1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  let lightboxTouch = 0;
+  lightbox.addEventListener('touchstart', e => lightboxTouch = e.changedTouches[0].clientX, {passive:true});
+  lightbox.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - lightboxTouch;
+    if (Math.abs(diff) > 45) showLightbox(lightboxIndex + (diff < 0 ? 1 : -1));
+  }, {passive:true});
+  addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'ArrowRight') showLightbox(lightboxIndex + 1);
+    if (e.key === 'ArrowLeft') showLightbox(lightboxIndex - 1);
+  });
+
+  const bottomBar = document.getElementById('mobileBottomBar');
+  const footer = document.querySelector('footer');
+  const footerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => bottomBar.classList.toggle('hidden', entry.isIntersecting));
+  }, { threshold: .05 });
+  footerObserver.observe(footer);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();

@@ -1,129 +1,295 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#090806">
-  <title>Solé Lounge Shëngjin | Kuzhinë Mesdhetare, Pizza dhe Kokteje</title>
-  <meta name="description" content="Përjetoni Solé Lounge në Shëngjin me kuzhinë mesdhetare, seafood, pizza, kokteje, perëndime dhe atmosferë lounge pranë detit.">
-  <meta property="og:title" content="Solé Lounge Shëngjin">
-  <meta property="og:description" content="Kuzhinë mesdhetare, kokteje, perëndime dhe atmosferë lounge pranë detit.">
-  <meta property="og:type" content="restaurant">
-  <meta property="og:image" content="assets/images/hero-sunset.webp">
-  <link rel="icon" href="assets/images/logo.webp">
+  <meta name="description" content="Solé Lounge në Shëngjin — kuzhinë mesdhetare, kokteje, perëndime dhe atmosferë lounge pranë detit.">
+  <title>Solé Lounge Shëngjin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/images/hero-sunset.webp">
+  <link rel="icon" href="assets/images/logo.png">
   <link rel="stylesheet" href="assets/style.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Restaurant","name":"Solé Lounge","address":{"@type":"PostalAddress","streetAddress":"Fran Ivanaj","addressLocality":"Shëngjin","addressCountry":"AL"},"servesCuisine":["Mediterranean","Seafood","Pizza"],"sameAs":["https://www.instagram.com/soleshengjin/"]}
-  </script>
 </head>
 <body>
+  <div class="page-noise" aria-hidden="true"></div>
+
   <header class="site-header" id="siteHeader">
-    <a class="brand" href="#ballina" aria-label="Solé Lounge"><img src="assets/images/logo.webp" alt="Logoja e Solé Lounge"></a>
+    <a class="brand" href="#ballina" aria-label="Solé Lounge">
+      <img src="assets/images/logo.png" alt="Solé Lounge logo">
+    </a>
     <nav class="desktop-nav" aria-label="Navigimi kryesor">
-      <a href="#ballina" data-i18n="navHome">Ballina</a><a href="#eksperienca" data-i18n="navExperience">Eksperienca</a><a href="#menuja" data-i18n="navMenu">Menuja</a><a href="#galeria" data-i18n="navGallery">Galeria</a><a href="#rezervimi" data-i18n="navReserve">Rezervimi</a><a href="#kontakti" data-i18n="navContact">Kontakti</a>
+      <a href="#ballina" data-al="Ballina" data-en="Home">Ballina</a>
+      <a href="#eksperienca" data-al="Eksperienca" data-en="Experience">Eksperienca</a>
+      <a href="#menuja" data-al="Menuja" data-en="Menu">Menuja</a>
+      <a href="#galeria" data-al="Galeria" data-en="Gallery">Galeria</a>
+      <a href="#rezervimi" data-al="Rezervimi" data-en="Reservations">Rezervimi</a>
     </nav>
     <div class="header-actions">
-      <button class="lang-toggle" type="button" aria-label="Ndrysho gjuhën"><span class="active">AL</span><span>/</span><span>EN</span></button>
-      <a class="button button-small desktop-reserve" href="#rezervimi" data-i18n="reserveTable">Rezervo tavolinën</a>
-      <button class="menu-toggle" type="button" aria-label="Hap menunë" aria-expanded="false"><span></span><span></span></button>
+      <button class="lang-toggle" type="button" aria-label="Ndrysho gjuhën"><span class="active">AL</span><span>EN</span></button>
+      <a class="header-cta" href="#rezervimi" data-al="Rezervo" data-en="Reserve">Rezervo</a>
+      <button class="menu-toggle" type="button" aria-label="Hap menunë" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <div class="mobile-menu-top"><img src="assets/images/logo.webp" alt="Solé Lounge"><button class="menu-close" type="button" aria-label="Mbyll menunë">×</button></div>
+    <div class="mobile-menu-top">
+      <img src="assets/images/logo.png" alt="Solé Lounge">
+      <button class="menu-close" type="button" aria-label="Mbyll menunë">×</button>
+    </div>
     <nav>
-      <a href="#ballina" data-i18n="navHome">Ballina</a><a href="#eksperienca" data-i18n="navExperience">Eksperienca</a><a href="#menuja" data-i18n="navMenu">Menuja</a><a href="#galeria" data-i18n="navGallery">Galeria</a><a href="#rezervimi" data-i18n="navReserve">Rezervimi</a><a href="#kontakti" data-i18n="navContact">Kontakti</a>
-      <a id="mobileInstagram" target="_blank" rel="noopener">Instagram</a><a id="mobileMaps" target="_blank" rel="noopener" data-i18n="location">Vendndodhja</a>
+      <a href="#ballina" data-al="Ballina" data-en="Home">Ballina</a>
+      <a href="#eksperienca" data-al="Eksperienca" data-en="Experience">Eksperienca</a>
+      <a href="#menuja" data-al="Menuja" data-en="Menu">Menuja</a>
+      <a href="#galeria" data-al="Galeria" data-en="Gallery">Galeria</a>
+      <a href="#rezervimi" data-al="Rezervimi" data-en="Reservations">Rezervimi</a>
+      <a href="#kontakti" data-al="Kontakti" data-en="Contact">Kontakti</a>
     </nav>
-    <a href="#rezervimi" class="button mobile-menu-cta" data-i18n="reserveTable">Rezervo tavolinën</a>
-    <p>Fran Ivanaj, Shëngjin, Albania</p>
+    <div class="mobile-menu-meta">
+      <a data-config-link="instagram" href="#">@soleshengjin</a>
+      <a data-config-link="maps" href="#" data-al="Fran Ivanaj, Shëngjin" data-en="Fran Ivanaj, Shëngjin">Fran Ivanaj, Shëngjin</a>
+    </div>
+    <a class="btn btn-gold mobile-menu-cta" href="#rezervimi" data-al="Rezervo tavolinën" data-en="Reserve a table">Rezervo tavolinën</a>
   </div>
 
   <main>
     <section class="hero" id="ballina">
-      <img class="hero-image" src="assets/images/hero-sunset.webp" alt="Perëndim dielli pranë Solé Lounge">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide active" style="background-image:url('assets/images/ig_b6.webp')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/ig_a3.webp')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/ig_b3.webp')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/ig_b1.webp')"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/ig_b2.webp')"></div>
+      </div>
       <div class="hero-overlay"></div>
-      <div class="hero-content shell">
-        <p class="eyebrow" data-i18n="heroEyebrow">LOUNGE • KUZHINË MESDHETARE • SHËNGJIN</p>
-        <h1 data-i18n="heroTitle">Shije mesdhetare,<br>kokteje dhe perëndime.</h1>
-        <p class="hero-copy" data-i18n="heroCopy">Një eksperiencë bregdetare në Shëngjin, nga dreka pranë detit deri te atmosfera e mbrëmjes.</p>
-        <div class="hero-buttons"><a class="button" href="#rezervimi" data-i18n="reserveTable">Rezervo tavolinën</a><a class="button button-ghost" href="#menuja" data-i18n="viewMenu">Shiko menunë</a></div>
+      <div class="hero-content container">
+        <p class="eyebrow" data-al="LOUNGE • KUZHINË MESDHETARE • SHËNGJIN" data-en="LOUNGE • MEDITERRANEAN CUISINE • SHËNGJIN">LOUNGE • KUZHINË MESDHETARE • SHËNGJIN</p>
+        <h1><span data-al="Shije mesdhetare," data-en="Mediterranean flavors,">Shije mesdhetare,</span><span data-al="kokteje dhe perëndime." data-en="cocktails and sunsets.">kokteje dhe perëndime.</span></h1>
+        <p class="hero-copy" data-al="Një eksperiencë bregdetare në Shëngjin, nga dreka pranë detit deri te atmosfera e mbrëmjes." data-en="A coastal experience in Shëngjin, from seaside dining to the atmosphere of the evening.">Një eksperiencë bregdetare në Shëngjin, nga dreka pranë detit deri te atmosfera e mbrëmjes.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-gold" href="#rezervimi" data-al="Rezervo tavolinën" data-en="Reserve a table">Rezervo tavolinën</a>
+          <a class="btn btn-ghost" href="#menuja" data-al="Shiko menunë" data-en="View the menu">Shiko menunë</a>
+        </div>
+        <div class="hero-progress" aria-label="Slideshow progress"></div>
+      </div>
+      <a class="scroll-cue" href="#eksperienca" aria-label="Shko te seksioni tjetër"><span></span></a>
+    </section>
+
+    <section class="quick-strip">
+      <div class="quick-item"><span class="mini-icon">⌖</span><span>Fran Ivanaj, Shëngjin</span></div>
+      <div class="quick-item"><span class="mini-icon">◇</span><span data-al="Kuzhinë mesdhetare" data-en="Mediterranean cuisine">Kuzhinë mesdhetare</span></div>
+      <div class="quick-item"><span class="mini-icon">◌</span><span data-al="Nga perëndimi në mbrëmje" data-en="From sunset into the night">Nga perëndimi në mbrëmje</span></div>
+    </section>
+
+    <section class="section experience" id="eksperienca">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow gold" data-al="PËRJETO SOLÉ" data-en="EXPERIENCE SOLÉ">PËRJETO SOLÉ</p>
+          <h2><span data-al="Nga bregdeti" data-en="From the coast">Nga bregdeti</span><span data-al="deri te mbrëmja." data-en="into the evening.">deri te mbrëmja.</span></h2>
+          <p data-al="Solé Lounge bashkon kuzhinën mesdhetare, koktejet, perëndimin dhe atmosferën e mbrëmjes në një destinacion të vetëm në Shëngjin." data-en="Solé Lounge brings Mediterranean cuisine, cocktails, sunset and evening atmosphere together in one destination in Shëngjin.">Solé Lounge bashkon kuzhinën mesdhetare, koktejet, perëndimin dhe atmosferën e mbrëmjes në një destinacion të vetëm në Shëngjin.</p>
+        </div>
+        <div class="experience-collage reveal">
+          <figure class="collage-main"><img src="assets/images/ig_c3.webp" alt="Ambient lounge në Solé Lounge" loading="lazy"></figure>
+          <figure><img src="assets/images/ig_b9.webp" alt="Koktej në Solé Lounge" loading="lazy"></figure>
+          <figure><img src="assets/images/ig_b8.webp" alt="Logo e Solé Lounge" loading="lazy"></figure>
+        </div>
+        <div class="feature-points reveal">
+          <div><span>01</span><p data-al="Kuzhinë mesdhetare" data-en="Mediterranean cuisine">Kuzhinë mesdhetare</p></div>
+          <div><span>02</span><p data-al="Kokteje të përgatitura me kujdes" data-en="Carefully crafted cocktails">Kokteje të përgatitura me kujdes</p></div>
+          <div><span>03</span><p data-al="Atmosferë nga perëndimi në mbrëmje" data-en="Atmosphere from sunset into the night">Atmosferë nga perëndimi në mbrëmje</p></div>
+        </div>
+      </div>
+      <div class="marquee viewport-wide" data-marquee>
+        <div class="marquee-track">
+          <img src="assets/images/ig_b2.webp" alt="Bar" loading="lazy">
+          <img src="assets/images/ig_b3.webp" alt="Lounge" loading="lazy">
+          <img src="assets/images/ig_b5.webp" alt="Koktej" loading="lazy">
+          <img src="assets/images/ig_a1.webp" alt="Përgatitje kokteji" loading="lazy">
+          <img src="assets/images/ig_b6.webp" alt="Perëndim" loading="lazy">
+          <img src="assets/images/ig_b10.webp" alt="Logo Solé" loading="lazy">
+          <img src="assets/images/ig_b2.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b3.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b5.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_a1.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b6.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b10.webp" alt="" aria-hidden="true" loading="lazy">
+        </div>
       </div>
     </section>
 
-    <section class="quick-info"><div class="shell quick-grid">
-      <div><span class="line-icon">⌖</span><p>Fran Ivanaj, Shëngjin</p></div>
-      <div><span class="line-icon">◇</span><p data-i18n="medCuisine">Kuzhinë mesdhetare</p></div>
-      <div><span class="line-icon">◌</span><p data-i18n="cocktailLounge">Kokteje dhe atmosferë lounge</p></div>
-    </div></section>
-
-    <section class="section experience" id="eksperienca"><div class="shell">
-      <div class="section-heading"><p class="eyebrow" data-i18n="experienceEyebrow">EKSPERIENCA SOLÉ</p><h2 data-i18n="experienceTitle">Përjeto Solé</h2><p data-i18n="experienceCopy">Solé Lounge bashkon kuzhinën mesdhetare, koktejet, perëndimin dhe atmosferën e mbrëmjes në një destinacion të vetëm në Shëngjin.</p></div>
-      <div class="experience-images"><img class="large" src="assets/images/bar.webp" alt="Bari i Solé Lounge" loading="lazy"><img src="assets/images/cocktail-orange.webp" alt="Koktej në Solé Lounge" loading="lazy"><img src="assets/images/sole-sign.webp" alt="Logoja e ndriçuar Solé" loading="lazy"></div>
-      <div class="points"><div><span>01</span><p data-i18n="point1">Kuzhinë mesdhetare</p></div><div><span>02</span><p data-i18n="point2">Kokteje të përgatitura me kujdes</p></div><div><span>03</span><p data-i18n="point3">Atmosferë nga perëndimi deri në mbrëmje</p></div></div>
-    </div></section>
-
-    <section class="section featured"><div class="shell">
-      <div class="section-heading"><p class="eyebrow" data-i18n="featuredEyebrow">SHIJE NGA MENUJA</p><h2 data-i18n="featuredTitle">Pjata për t’u shijuar dhe ndarë.</h2></div>
-      <div class="food-slider">
-        <article class="food-card"><img src="assets/images/food-prep.webp" alt="Përgatitje ushqimi në Solé Lounge" loading="lazy"><div><h3 data-i18n="f1">Krudo premium deti</h3><p>Premium Seafood Crudo</p><div class="card-bottom"><span>5,000 L</span><a href="#aperitiv" data-i18n="seeMenu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/ig_b2.webp" alt="Pije dhe shije në Solé Lounge" loading="lazy"><div><h3 data-i18n="f2">Mix djathërash dhe proshutash</h3><p>Cheese & Charcuterie Board</p><div class="card-bottom"><span>2,500 L</span><a href="#aperitiv" data-i18n="seeMenu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/cocktail-green.webp" alt="Prezantim premium në Solé Lounge" loading="lazy"><div><h3 data-i18n="f3">Tacos me karkaleca</h3><p>Shrimp Tacos</p><div class="card-bottom"><span>1,500 L</span><a href="#aperitiv" data-i18n="seeMenu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/lounge-wide.webp" alt="Ambient për të shijuar menunë" loading="lazy"><div><h3>Meravigliosa</h3><p>Mozzarella, truffle & Gorgonzola</p><div class="card-bottom"><span>1,000 L</span><a href="#pizza" data-i18n="seeMenu">Shiko në menu</a></div></div></article>
+    <section class="section featured" id="shijet">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow gold" data-al="SHIJE NGA MENUJA" data-en="A TASTE OF THE MENU">SHIJE NGA MENUJA</p>
+          <h2><span data-al="Pjata të krijuara" data-en="Dishes designed">Pjata të krijuara</span><span data-al="për t’u ndarë." data-en="to be shared.">për t’u ndarë.</span></h2>
+        </div>
       </div>
-    </div></section>
-
-    <section class="section menu-section" id="menuja"><div class="shell">
-      <div class="section-heading"><p class="eyebrow" data-i18n="menuEyebrow">MENUJA SOLÉ</p><h2 data-i18n="menuTitle">Shije mesdhetare, pizza dhe pjata për t’u ndarë.</h2></div>
-      <div class="menu-tabs"><button class="active" data-target="aperitiv">Aperitiv & Sharing</button><button data-target="pizza">Pizza</button></div>
-      <div class="menu-category" id="aperitiv"><div class="category-image"><img src="assets/images/food-prep.webp" alt="Aperitivë dhe pjata për ndarje" loading="lazy"><h3>Aperitiv & Sharing</h3></div><div class="menu-list" id="aperitivList"></div></div>
-      <div class="menu-category" id="pizza"><div class="category-image"><img src="assets/images/lounge-wide.webp" alt="Pizza në atmosferën e Solé Lounge" loading="lazy"><h3>Pizza</h3></div><div class="menu-list" id="pizzaList"></div></div>
-      <p class="allergy" data-i18n="allergy">Ju lutemi informoni stafin për çdo alergji ose intolerancë ushqimore përpara porosisë.</p>
-    </div></section>
-
-    <section class="visual-banner sunset-banner"><img src="assets/images/hero-sunset.webp" alt="Perëndim në Shëngjin" loading="lazy"><div class="visual-overlay"></div><div class="visual-content shell"><p class="eyebrow" data-i18n="sunsetEyebrow">PERËNDIMI NË SOLÉ</p><h2 data-i18n="sunsetTitle">Nga perëndimi në mbrëmje</h2><p data-i18n="sunsetCopy">Filloni me ushqim pranë detit dhe vazhdoni me kokteje, muzikë dhe atmosferën e Solé Lounge.</p><a href="#rezervimi" class="button" data-i18n="reserveSunset">Rezervo për perëndim</a></div></section>
-
-    <section class="visual-banner evening-banner"><img src="assets/images/evening.webp" alt="Atmosfera e mbrëmjes në Solé Lounge" loading="lazy"><div class="visual-overlay violet"></div><div class="visual-content shell"><p class="eyebrow" data-i18n="nightEyebrow">SOLÉ PAS PERËNDIMIT</p><h2 data-i18n="nightTitle">Nga darka te atmosfera e mbrëmjes.</h2><p data-i18n="nightCopy">Ndërsa perëndon dielli, Solé Lounge transformohet në një hapësirë me muzikë, kokteje dhe energji bregdetare.</p></div></section>
-
-    <section class="section gallery" id="galeria"><div class="shell"><div class="section-heading"><p class="eyebrow" data-i18n="galleryEyebrow">GALERIA</p><h2 data-i18n="galleryTitle">Shije, perëndime dhe net në Solé.</h2></div></div>
-      <div class="marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
-      <div class="shell"><div class="gallery-grid" id="galleryGrid"></div></div>
+      <div class="food-slider" aria-label="Pjatat e veçuara">
+        <article class="food-card"><img src="assets/images/ig_a1.webp" alt="Përgatitje premium"><div><p class="food-name">Krudo premium deti</p><p class="food-en">Premium Seafood Crudo</p><div class="food-meta"><span>5,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+        <article class="food-card"><img src="assets/images/ig_b5.webp" alt="Prezantim premium"><div><p class="food-name">Mix djathërash dhe proshutash</p><p class="food-en">Cheese & Charcuterie Board</p><div class="food-meta"><span>2,500 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+        <article class="food-card"><img src="assets/images/ig_c1.webp" alt="Përgatitje e freskët"><div><p class="food-name">Tacos me karkaleca</p><p class="food-en">Shrimp Tacos</p><div class="food-meta"><span>1,500 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+        <article class="food-card"><img src="assets/images/ig_b9.webp" alt="Solé Lounge"><div><p class="food-name">Elegance</p><p class="food-en">Pizza signature</p><div class="food-meta"><span>1,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+        <article class="food-card"><img src="assets/images/ig_b7.webp" alt="Solé Lounge"><div><p class="food-name">Meravigliosa</p><p class="food-en">Pizza signature</p><div class="food-meta"><span>1,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+      </div>
     </section>
 
-    <section class="section reservation" id="rezervimi"><div class="shell reservation-wrap">
-      <div class="reservation-photo"><img src="assets/images/ig_b3.webp" alt="Ambient lounge për rezervim" loading="lazy"></div>
-      <div class="reservation-content"><div class="section-heading"><p class="eyebrow" data-i18n="reservationEyebrow">REZERVIMI</p><h2 data-i18n="reservationTitle">Rezervo tavolinën tënde.</h2><p data-i18n="reservationCopy">Plotësoni të dhënat dhe dërgoni kërkesën tuaj direkt te Solé Lounge përmes WhatsApp-it.</p></div>
-      <form id="reservationForm" novalidate>
-        <label><span data-i18n="fullName">Emri dhe mbiemri</span><input name="name" required autocomplete="name"></label>
-        <label><span data-i18n="phone">Numri i telefonit</span><input name="phone" required inputmode="tel" autocomplete="tel"></label>
-        <div class="form-row"><label><span data-i18n="date">Data</span><input type="date" name="date" required></label><label><span data-i18n="time">Ora</span><input type="time" name="time" required></label></div>
-        <label><span data-i18n="guests">Numri i personave</span><input type="number" min="1" max="30" name="guests" required></label>
-        <label><span data-i18n="seating">Preferenca e tavolinës</span><select name="seating"><option value="none" data-i18n="seatNone">Nuk kam preferencë</option><option value="lounge" data-i18n="seatLounge">Ambient lounge</option><option value="sea" data-i18n="seatSea">Pranë pamjes së detit</option><option value="inside" data-i18n="seatInside">Ambient i brendshëm</option></select></label>
-        <label><span data-i18n="message">Mesazhi</span><textarea name="message" rows="4"></textarea></label>
-        <button class="button form-submit" type="submit" data-i18n="sendWhatsapp">Dërgo kërkesën në WhatsApp</button>
-        <p class="form-status" id="formStatus" role="status"></p>
-        <p class="confirmation-note" data-i18n="confirmation">Rezervimi konsiderohet i konfirmuar vetëm pasi të merrni konfirmim nga Solé Lounge.</p>
-      </form></div>
-    </div></section>
+    <section class="section menu-section" id="menuja">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow gold" data-al="MENUJA SOLÉ" data-en="THE SOLÉ MENU">MENUJA SOLÉ</p>
+          <h2><span data-al="Shije mesdhetare" data-en="Mediterranean flavors">Shije mesdhetare</span><span data-al="dhe pizza artizanale." data-en="and artisan pizza.">dhe pizza artizanale.</span></h2>
+        </div>
+        <div class="menu-tabs" role="tablist">
+          <button class="menu-tab active" data-category="sharing" role="tab" aria-selected="true">Aperitiv & Sharing</button>
+          <button class="menu-tab" data-category="pizza" role="tab" aria-selected="false">Pizza</button>
+        </div>
+        <div id="menuContent" class="menu-content reveal"></div>
+        <p class="allergy-note" data-al="Ju lutemi informoni stafin për çdo alergji ose intolerancë ushqimore përpara porosisë." data-en="Please inform our staff about any food allergies or intolerances before ordering.">Ju lutemi informoni stafin për çdo alergji ose intolerancë ushqimore përpara porosisë.</p>
+      </div>
+    </section>
 
-    <section class="section contact" id="kontakti"><div class="shell contact-wrap">
-      <img class="contact-image" src="assets/images/ig_b6.webp" alt="Pamje e jashtme e Solé Lounge" loading="lazy">
-      <div><div class="section-heading"><p class="eyebrow" data-i18n="contactEyebrow">KONTAKTI</p><h2 data-i18n="contactTitle">Na gjeni në Shëngjin.</h2></div>
-      <dl><div><dt data-i18n="address">Adresa</dt><dd>Fran Ivanaj, Shëngjin, Albania</dd></div><div><dt>Instagram</dt><dd><a id="contactInstagram" target="_blank" rel="noopener">@soleshengjin</a></dd></div><div><dt data-i18n="phone">Numri i telefonit</dt><dd id="phoneDisplay">—</dd></div><div><dt>WhatsApp</dt><dd id="whatsappDisplay">—</dd></div><div><dt data-i18n="hours">Orari</dt><dd id="hoursDisplay">—</dd></div></dl>
-      <div class="contact-buttons"><a class="button" id="mapsButton" target="_blank" rel="noopener" data-i18n="openMaps">Hap në Google Maps</a><a class="button button-dark" id="instagramButton" target="_blank" rel="noopener" data-i18n="viewInstagram">Shiko Instagramin</a></div></div>
-    </div></section>
+    <section class="cinematic sunset-section">
+      <img src="assets/images/ig_b6.webp" alt="Perëndimi në Solé Lounge" loading="lazy">
+      <div class="cinematic-overlay"></div>
+      <div class="cinematic-content container reveal">
+        <p class="eyebrow" data-al="PERËNDIMI NË SOLÉ" data-en="SUNSET AT SOLÉ">PERËNDIMI NË SOLÉ</p>
+        <h2><span data-al="Nga perëndimi" data-en="From sunset">Nga perëndimi</span><span data-al="deri te nata." data-en="into the night.">deri te nata.</span></h2>
+        <p data-al="Filloni me ushqim pranë detit dhe vazhdoni me kokteje, muzikë dhe atmosferën e Solé Lounge." data-en="Begin with food by the sea and continue with cocktails, music and the atmosphere of Solé Lounge.">Filloni me ushqim pranë detit dhe vazhdoni me kokteje, muzikë dhe atmosferën e Solé Lounge.</p>
+        <a class="btn btn-gold" href="#rezervimi" data-al="Rezervo për perëndim" data-en="Reserve for sunset">Rezervo për perëndim</a>
+      </div>
+    </section>
+
+    <section class="section night-section">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow violet" data-al="SOLÉ PAS PERËNDIMIT" data-en="SOLÉ AFTER SUNSET">SOLÉ PAS PERËNDIMIT</p>
+          <h2><span data-al="Mbrëmje me stil" data-en="Evenings with style">Mbrëmje me stil</span><span data-al="dhe atmosferë." data-en="and atmosphere.">dhe atmosferë.</span></h2>
+          <p data-al="Ndërsa perëndon dielli, Solé Lounge transformohet në një ambient elegant me muzikë, kokteje dhe energji bregdetare." data-en="As the sun sets, Solé Lounge transforms into an elegant setting with music, cocktails and coastal energy.">Ndërsa perëndon dielli, Solé Lounge transformohet në një ambient elegant me muzikë, kokteje dhe energji bregdetare.</p>
+        </div>
+      </div>
+      <div class="night-slider" aria-label="Atmosfera e mbrëmjes">
+        <div class="night-slide active"><img src="assets/images/ig_a4.webp" alt="Atmosferë nate në Solé Lounge" loading="lazy"></div>
+        <div class="night-slide"><img src="assets/images/ig_b1.webp" alt="Lounge gjatë natës" loading="lazy"></div>
+        <div class="night-slide"><img src="assets/images/ig_b3.webp" alt="Ambient me ndriçim vjollcë" loading="lazy"></div>
+        <div class="night-slide"><img src="assets/images/ig_b4.webp" alt="Ambient intim" loading="lazy"></div>
+        <div class="night-progress"></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow gold" data-al="GALERIA" data-en="GALLERY">GALERIA</p>
+          <h2><span data-al="Momente nga" data-en="Moments from">Momente nga</span><span data-al="Solé Lounge." data-en="Solé Lounge.">Solé Lounge.</span></h2>
+        </div>
+      </div>
+      <div class="gallery-marquee viewport-wide">
+        <div class="gallery-track">
+          <img src="assets/images/ig_b9.webp" alt="Koktej portokalli" loading="lazy">
+          <img src="assets/images/ig_b6.webp" alt="Perëndim" loading="lazy">
+          <img src="assets/images/ig_b8.webp" alt="Shenja Solé" loading="lazy">
+          <img src="assets/images/ig_b2.webp" alt="Bar" loading="lazy">
+          <img src="assets/images/ig_a1.webp" alt="Përgatitje kokteji" loading="lazy">
+          <img src="assets/images/ig_b3.webp" alt="Lounge" loading="lazy">
+          <img src="assets/images/ig_b9.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b6.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b8.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b2.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_a1.webp" alt="" aria-hidden="true" loading="lazy">
+          <img src="assets/images/ig_b3.webp" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+      <div class="container">
+        <div class="gallery-grid" id="galleryGrid">
+          <button><img src="assets/images/ig_b6.webp" alt="Perëndim në Solé Lounge" loading="lazy"></button>
+          <button><img src="assets/images/ig_b5.webp" alt="Koktej i gjelbër" loading="lazy"></button>
+          <button><img src="assets/images/ig_b10.webp" alt="Logo Solé në mur" loading="lazy"></button>
+          <button><img src="assets/images/ig_b2.webp" alt="Bar i Solé Lounge" loading="lazy"></button>
+          <button><img src="assets/images/ig_a1.webp" alt="Përgatitje kokteji" loading="lazy"></button>
+          <button><img src="assets/images/ig_c3.webp" alt="Ulëse lounge" loading="lazy"></button>
+          <button><img src="assets/images/ig_a4.webp" alt="Atmosferë nate" loading="lazy"></button>
+          <button><img src="assets/images/ig_b1.webp" alt="Ambient i jashtëm" loading="lazy"></button>
+          <button><img src="assets/images/ig_b9.webp" alt="Koktej portokalli" loading="lazy"></button>
+          <button><img src="assets/images/ig_b3.webp" alt="Palma dhe ndriçim" loading="lazy"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reservation-section" id="rezervimi">
+      <div class="container">
+        <div class="reservation-image reveal"><img src="assets/images/ig_b7.webp" alt="Ambient për rezervime në Solé Lounge" loading="lazy"></div>
+        <div class="reservation-card reveal">
+          <p class="eyebrow gold" data-al="REZERVIMI" data-en="RESERVATIONS">REZERVIMI</p>
+          <h2><span data-al="Rezervo tavolinën" data-en="Reserve your table">Rezervo tavolinën</span><span data-al="tënde në Solé." data-en="at Solé.">tënde në Solé.</span></h2>
+          <form id="reservationForm" novalidate>
+            <label><span data-al="Emri dhe mbiemri" data-en="Full name">Emri dhe mbiemri</span><input name="name" required autocomplete="name"></label>
+            <label><span data-al="Numri i telefonit" data-en="Phone number">Numri i telefonit</span><input name="phone" type="tel" required autocomplete="tel"></label>
+            <div class="form-row">
+              <label><span data-al="Data" data-en="Date">Data</span><input name="date" type="date" required></label>
+              <label><span data-al="Ora" data-en="Time">Ora</span><input name="time" type="time" required></label>
+            </div>
+            <label><span data-al="Numri i personave" data-en="Number of guests">Numri i personave</span><input name="guests" type="number" min="1" max="30" required></label>
+            <label><span data-al="Preferenca e tavolinës" data-en="Seating preference">Preferenca e tavolinës</span><select name="preference"><option value="Pa preferencë" data-al="Pa preferencë" data-en="No preference">Pa preferencë</option><option value="Ambient lounge" data-al="Ambient lounge" data-en="Lounge area">Ambient lounge</option><option value="Pranë pamjes së detit" data-al="Pranë pamjes së detit" data-en="Near the sea view">Pranë pamjes së detit</option><option value="Ambient i brendshëm" data-al="Ambient i brendshëm" data-en="Indoor area">Ambient i brendshëm</option></select></label>
+            <label><span data-al="Mesazhi" data-en="Message">Mesazhi</span><textarea name="message" rows="4"></textarea></label>
+            <button class="btn btn-gold btn-full" type="submit" data-al="Dërgo kërkesën në WhatsApp" data-en="Send request on WhatsApp">Dërgo kërkesën në WhatsApp</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+          <p class="reservation-note" data-al="Rezervimi konsiderohet i konfirmuar vetëm pasi të merrni konfirmim nga Solé Lounge." data-en="The reservation is confirmed only after you receive confirmation from Solé Lounge.">Rezervimi konsiderohet i konfirmuar vetëm pasi të merrni konfirmim nga Solé Lounge.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="kontakti">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow gold" data-al="KONTAKTI" data-en="CONTACT">KONTAKTI</p>
+          <h2><span data-al="Na gjeni" data-en="Find us">Na gjeni</span><span data-al="në Shëngjin." data-en="in Shëngjin.">në Shëngjin.</span></h2>
+        </div>
+        <div class="contact-card reveal">
+          <img src="assets/images/ig_b10.webp" alt="Solé Lounge në Shëngjin" loading="lazy">
+          <div class="contact-content">
+            <p class="contact-name">Solé Lounge</p>
+            <p>Fran Ivanaj, Shëngjin, Albania</p>
+            <a data-config-link="instagram" href="#">@soleshengjin</a>
+            <p class="config-phone" hidden></p>
+            <p class="config-hours" hidden></p>
+            <div class="contact-actions">
+              <a class="btn btn-gold" data-config-link="maps" href="#" data-al="Hap në Google Maps" data-en="Open in Google Maps">Hap në Google Maps</a>
+              <a class="btn btn-dark" data-config-link="instagram" href="#" data-al="Shiko Instagramin" data-en="View Instagram">Shiko Instagramin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer><div class="shell footer-grid"><div><img src="assets/images/logo.webp" alt="Solé Lounge"><p data-i18n="footerCopy">Kuzhinë mesdhetare, kokteje, perëndime dhe atmosferë lounge pranë detit në Shëngjin.</p></div><nav><a href="#ballina" data-i18n="navHome">Ballina</a><a href="#menuja" data-i18n="navMenu">Menuja</a><a href="#galeria" data-i18n="navGallery">Galeria</a><a href="#rezervimi" data-i18n="navReserve">Rezervimi</a></nav><div><p>Fran Ivanaj, Shëngjin</p><a id="footerInstagram" target="_blank" rel="noopener">@soleshengjin</a><button class="lang-toggle footer-lang" type="button"><span class="active">AL</span><span>/</span><span>EN</span></button></div></div><div class="shell copyright">© <span id="year"></span> Solé Lounge. <span data-i18n="rights">Të gjitha të drejtat e rezervuara.</span></div></footer>
+  <footer>
+    <div class="container footer-grid">
+      <div><img class="footer-logo" src="assets/images/logo.png" alt="Solé Lounge"><p data-al="Kuzhinë mesdhetare, kokteje, perëndime dhe atmosferë lounge pranë detit në Shëngjin." data-en="Mediterranean cuisine, cocktails, sunsets and a coastal lounge atmosphere in Shëngjin.">Kuzhinë mesdhetare, kokteje, perëndime dhe atmosferë lounge pranë detit në Shëngjin.</p></div>
+      <div class="footer-links"><a href="#eksperienca" data-al="Eksperienca" data-en="Experience">Eksperienca</a><a href="#menuja" data-al="Menuja" data-en="Menu">Menuja</a><a href="#galeria" data-al="Galeria" data-en="Gallery">Galeria</a><a href="#rezervimi" data-al="Rezervimi" data-en="Reservations">Rezervimi</a></div>
+      <div class="footer-contact"><a data-config-link="instagram" href="#">@soleshengjin</a><a data-config-link="maps" href="#">Fran Ivanaj, Shëngjin</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Solé Lounge</span><button class="lang-toggle footer-lang" type="button"><span class="active">AL</span><span>EN</span></button></div>
+  </footer>
 
-  <div class="mobile-bottom-bar"><button id="callAction" type="button"><span>⌕</span><small data-i18n="call">Telefono</small></button><a id="mapAction" target="_blank" rel="noopener"><span>⌖</span><small data-i18n="maps">Harta</small></a><a class="reserve-action" href="#rezervimi"><span>◇</span><small data-i18n="reserveShort">Rezervo</small></a></div>
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <a class="bottom-phone" href="#" aria-disabled="true"><span class="bar-icon">◡</span><span data-al="Telefono" data-en="Call">Telefono</span></a>
+    <a data-config-link="maps" href="#"><span class="bar-icon">⌖</span><span data-al="Harta" data-en="Map">Harta</span></a>
+    <a class="reserve" href="#rezervimi"><span class="bar-icon">◇</span><span data-al="Rezervo" data-en="Reserve">Rezervo</span></a>
+  </div>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Mbyll">×</button><button class="lightbox-prev" aria-label="Fotoja e mëparshme">‹</button><img alt=""><button class="lightbox-next" aria-label="Fotoja tjetër">›</button><span class="lightbox-counter"></span></div>
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="lightbox-close" type="button" aria-label="Mbyll">×</button>
+    <button class="lightbox-prev" type="button" aria-label="I mëparshmi">‹</button>
+    <img src="" alt="">
+    <button class="lightbox-next" type="button" aria-label="Tjetri">›</button>
+    <div class="lightbox-count"></div>
+  </div>
 
-  <script src="assets/config.js"></script><script src="assets/script.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
