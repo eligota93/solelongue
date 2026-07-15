@@ -131,7 +131,7 @@
       void button.offsetWidth;
       button.classList.toggle('active', i === heroIndex);
     });
-    heroTimer = setInterval(() => setHero(heroIndex + 1), 4800);
+    heroTimer = setInterval(() => setHero(heroIndex + 1), 3000);
   }
   let heroTouchX = 0;
   document.querySelector('.hero').addEventListener('touchstart', e => heroTouchX = e.changedTouches[0].clientX, {passive:true});
@@ -140,6 +140,27 @@
     if (Math.abs(diff) > 50) setHero(heroIndex + (diff < 0 ? 1 : -1));
   }, {passive:true});
   setHero(0);
+
+  const foodSlider = document.querySelector('.food-slider');
+  const foodPrev = document.querySelector('.food-arrow-left');
+  const foodNext = document.querySelector('.food-arrow-right');
+  if (foodSlider && foodPrev && foodNext) {
+    const scrollFood = direction => {
+      const card = foodSlider.querySelector('.food-card');
+      const gap = parseFloat(getComputedStyle(foodSlider).gap) || 14;
+      const distance = card ? card.getBoundingClientRect().width + gap : foodSlider.clientWidth * .86;
+      foodSlider.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    };
+    const updateFoodArrows = () => {
+      foodPrev.disabled = foodSlider.scrollLeft <= 4;
+      foodNext.disabled = foodSlider.scrollLeft + foodSlider.clientWidth >= foodSlider.scrollWidth - 4;
+    };
+    foodPrev.addEventListener('click', () => scrollFood(-1));
+    foodNext.addEventListener('click', () => scrollFood(1));
+    foodSlider.addEventListener('scroll', updateFoodArrows, { passive: true });
+    addEventListener('resize', updateFoodArrows, { passive: true });
+    updateFoodArrows();
+  }
 
   const nightSlides = [...document.querySelectorAll('.night-slide')];
   let nightIndex = 0;
@@ -151,7 +172,7 @@
     bar.style.animation = 'none';
     void bar.offsetWidth;
     bar.style.animation = '';
-  }, 3800);
+  }, 3000);
 
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
@@ -165,21 +186,24 @@
     document.querySelectorAll('[data-config-link="maps"]').forEach(a => {
       a.href = config.maps || '#'; a.target = '_blank'; a.rel = 'noopener';
     });
-    const phoneBar = document.querySelector('.bottom-phone');
-    if (config.phoneLink) {
-      phoneBar.href = `tel:${config.phoneLink}`;
-      phoneBar.removeAttribute('aria-disabled');
-    } else {
-      phoneBar.href = config.instagram || '#';
-      phoneBar.target = '_blank';
-      phoneBar.querySelector('span:last-child').dataset.al = 'Instagram';
-      phoneBar.querySelector('span:last-child').dataset.en = 'Instagram';
-    }
+    const whatsappTargets = document.querySelectorAll('.bottom-whatsapp, .contact-whatsapp');
+    whatsappTargets.forEach(link => {
+      if (config.whatsapp) {
+        link.href = `https://wa.me/${config.whatsapp}`;
+        link.target = '_blank';
+        link.rel = 'noopener';
+      } else {
+        link.href = '#rezervimi';
+      }
+    });
   }
 
   function applyConfigText() {
     const phone = document.querySelector('.config-phone');
-    if (phone && config.phoneDisplay) { phone.hidden = false; phone.textContent = config.phoneDisplay; }
+    if (phone && config.phoneLink) {
+      phone.href = config.phoneLink;
+      phone.textContent = config.phoneDisplay || 'Telefono';
+    }
     const hours = document.querySelector('.config-hours');
     const value = language === 'al' ? config.openingHoursAL : config.openingHoursEN;
     if (hours && value) { hours.hidden = false; hours.textContent = value; }

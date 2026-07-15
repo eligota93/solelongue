@@ -127,12 +127,20 @@
           <h2><span data-al="Pjata të krijuara" data-en="Dishes designed">Pjata të krijuara</span><span data-al="për t’u ndarë." data-en="to be shared.">për t’u ndarë.</span></h2>
         </div>
       </div>
-      <div class="food-slider" aria-label="Pjatat e veçuara">
-        <article class="food-card"><img src="assets/images/ig_a1.webp" alt="Përgatitje premium"><div><p class="food-name">Krudo premium deti</p><p class="food-en">Premium Seafood Crudo</p><div class="food-meta"><span>5,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/ig_b5.webp" alt="Prezantim premium"><div><p class="food-name">Mix djathërash dhe proshutash</p><p class="food-en">Cheese & Charcuterie Board</p><div class="food-meta"><span>2,500 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/ig_c1.webp" alt="Përgatitje e freskët"><div><p class="food-name">Tacos me karkaleca</p><p class="food-en">Shrimp Tacos</p><div class="food-meta"><span>1,500 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/ig_b9.webp" alt="Solé Lounge"><div><p class="food-name">Elegance</p><p class="food-en">Pizza signature</p><div class="food-meta"><span>1,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
-        <article class="food-card"><img src="assets/images/ig_b7.webp" alt="Solé Lounge"><div><p class="food-name">Meravigliosa</p><p class="food-en">Pizza signature</p><div class="food-meta"><span>1,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+      <div class="food-slider-wrap">
+        <button class="food-arrow food-arrow-left" type="button" aria-label="Pjata e mëparshme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="food-slider" aria-label="Pjatat e veçuara">
+          <article class="food-card"><img src="assets/images/ig_a1.webp" alt="Përgatitje premium"><div><p class="food-name">Krudo premium deti</p><p class="food-en">Premium Seafood Crudo</p><div class="food-meta"><span>5,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+          <article class="food-card"><img src="assets/images/ig_b5.webp" alt="Prezantim premium"><div><p class="food-name">Mix djathërash dhe proshutash</p><p class="food-en">Cheese & Charcuterie Board</p><div class="food-meta"><span>2,500 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+          <article class="food-card"><img src="assets/images/ig_c1.webp" alt="Përgatitje e freskët"><div><p class="food-name">Tacos me karkaleca</p><p class="food-en">Shrimp Tacos</p><div class="food-meta"><span>1,500 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+          <article class="food-card"><img src="assets/images/ig_b9.webp" alt="Solé Lounge"><div><p class="food-name">Elegance</p><p class="food-en">Pizza signature</p><div class="food-meta"><span>1,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+          <article class="food-card"><img src="assets/images/ig_b7.webp" alt="Solé Lounge"><div><p class="food-name">Meravigliosa</p><p class="food-en">Pizza signature</p><div class="food-meta"><span>1,000 L</span><a href="#menuja" data-al="Shiko në menu" data-en="View in menu">Shiko në menu</a></div></div></article>
+        </div>
+        <button class="food-arrow food-arrow-right" type="button" aria-label="Pjata e ardhshme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
       </div>
     </section>
 
@@ -254,11 +262,12 @@
             <p class="contact-name">Solé Lounge</p>
             <p>Fran Ivanaj, Shëngjin, Albania</p>
             <a data-config-link="instagram" href="#">@soleshengjin</a>
-            <p class="config-phone" hidden></p>
+            <a class="config-phone visually-hidden" hidden href="#"></a>
             <p class="config-hours" hidden></p>
             <div class="contact-actions">
-              <a class="btn btn-gold" data-config-link="maps" href="#" data-al="Hap në Google Maps" data-en="Open in Google Maps">Hap në Google Maps</a>
-              <a class="btn btn-dark" data-config-link="instagram" href="#" data-al="Shiko Instagramin" data-en="View Instagram">Shiko Instagramin</a>
+              <a class="btn btn-gold contact-whatsapp" href="#" data-al="WhatsApp" data-en="WhatsApp">WhatsApp</a>
+              <a class="btn btn-dark" data-config-link="maps" href="#" data-al="Lokacioni" data-en="Location">Lokacioni</a>
+              <a class="btn btn-dark" data-config-link="instagram" href="#" data-al="Instagram" data-en="Instagram">Instagram</a>
             </div>
           </div>
         </div>
@@ -272,13 +281,22 @@
       <div class="footer-links"><a href="#eksperienca" data-al="Eksperienca" data-en="Experience">Eksperienca</a><a href="#menuja" data-al="Menuja" data-en="Menu">Menuja</a><a href="#galeria" data-al="Galeria" data-en="Gallery">Galeria</a><a href="#rezervimi" data-al="Rezervimi" data-en="Reservations">Rezervimi</a></div>
       <div class="footer-contact"><a data-config-link="instagram" href="#">@soleshengjin</a><a data-config-link="maps" href="#">Fran Ivanaj, Shëngjin</a></div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> Solé Lounge</span><button class="lang-toggle footer-lang" type="button"><span class="active">AL</span><span>EN</span></button></div>
+    <div class="container footer-bottom"><span>© Solé Lounge</span><button class="lang-toggle footer-lang" type="button"><span class="active">AL</span><span>EN</span></button></div>
   </footer>
 
   <div class="mobile-bottom-bar" id="mobileBottomBar">
-    <a class="bottom-phone" href="#" aria-disabled="true"><span class="bar-icon">◡</span><span data-al="Telefono" data-en="Call">Telefono</span></a>
-    <a data-config-link="maps" href="#"><span class="bar-icon">⌖</span><span data-al="Harta" data-en="Map">Harta</span></a>
-    <a class="reserve" href="#rezervimi"><span class="bar-icon">◇</span><span data-al="Rezervo" data-en="Reserve">Rezervo</span></a>
+    <a class="bottom-whatsapp" href="#rezervimi" aria-label="WhatsApp">
+      <svg class="bar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.3-4.2a8.5 8.5 0 1 1 15.7-4.5Z"/><path d="M8.3 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.8c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.5 1 1.3 1.8 2.3 2.3.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.3-.7 1.8-.6.5-1.4.8-2.3.6-1-.2-2.7-.8-4.6-2.5-1.5-1.4-2.5-3.1-2.8-4.2-.3-1.1 0-1.8.3-2.2l.7-.8Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a data-config-link="maps" href="#">
+      <svg class="bar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span data-al="Lokacioni" data-en="Location">Lokacioni</span>
+    </a>
+    <a class="reserve" href="#rezervimi">
+      <svg class="bar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 21 12 12 21 3 12 12 3Z"/><path d="M8.5 12h7"/></svg>
+      <span data-al="Rezervo" data-en="Reserve">Rezervo</span>
+    </a>
   </div>
 
   <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
