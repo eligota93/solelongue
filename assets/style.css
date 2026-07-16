@@ -92,9 +92,9 @@ p{line-height:1.75;color:var(--muted);font-size:14px}
 .experience-collage .collage-main{grid-row:1 / span 2}
 .experience-collage img{width:100%;height:100%;object-fit:cover}
 .feature-points{display:grid;gap:0;border-top:1px solid var(--line);margin-bottom:40px}
-.feature-points div{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:center;padding:17px 0;border-bottom:1px solid var(--line)}
-.feature-points span{color:var(--gold);font-size:11px;letter-spacing:.12em}
-.feature-points p{margin:0;color:var(--cream);font-weight:400;font-size:13px}
+.feature-points div{display:flex;justify-content:center;align-items:center;padding:17px 0;border-bottom:1px solid var(--line);text-align:center}
+.feature-points span{display:none}
+.feature-points p{margin:0;color:var(--cream);font-weight:400;font-size:13px;text-align:center}
 .viewport-wide{overflow:hidden;width:100%}
 .marquee-track,.gallery-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
 .marquee-track img{width:72vw;max-width:330px;height:300px;object-fit:cover;margin-right:12px;border-radius:16px}
@@ -208,7 +208,7 @@ footer{padding:62px 0 calc(92px + env(safe-area-inset-bottom));background:#07060
   .experience-collage{grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:390px}
   .experience-collage .collage-main{grid-row:auto}
   .feature-points{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
-  .feature-points div{grid-template-columns:34px 1fr;border-bottom:0;border-right:1px solid var(--line);padding:20px}
+  .feature-points div{display:flex;justify-content:center;align-items:center;border-bottom:0;border-right:1px solid var(--line);padding:20px;text-align:center}
   .feature-points div:last-child{border-right:0}
   .food-card{flex-basis:46%}
   .menu-content{display:grid;grid-template-columns:1fr 1fr;gap:0 38px}
