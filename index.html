@@ -249,24 +249,77 @@
 
     <section class="section reservation-section" id="rezervimi">
       <div class="container">
-        <div class="reservation-image reveal"><img src="assets/images/ig_b7.webp" alt="Ambient për rezervime në Solé Lounge" loading="lazy"></div>
-        <div class="reservation-card reveal">
-          <p class="eyebrow gold" data-al="REZERVIMI" data-en="RESERVATIONS">REZERVIMI</p>
-          <h2><span data-al="Rezervo tavolinën" data-en="Reserve your table">Rezervo tavolinën</span><span data-al="tënde në Solé." data-en="at Solé.">tënde në Solé.</span></h2>
-          <form id="reservationForm" novalidate>
-            <label><span data-al="Emri dhe mbiemri" data-en="Full name">Emri dhe mbiemri</span><input name="name" required autocomplete="name"></label>
-            <label><span data-al="Numri i telefonit" data-en="Phone number">Numri i telefonit</span><input name="phone" type="tel" required autocomplete="tel"></label>
-            <div class="form-row">
-              <label><span data-al="Data" data-en="Date">Data</span><input name="date" type="date" required></label>
-              <label><span data-al="Ora" data-en="Time">Ora</span><input name="time" type="time" required></label>
+        <div class="reservation-shell reveal">
+          <div class="reservation-visual">
+            <img src="assets/images/gallery_new1.webp" alt="Ambient për rezervime në Solé Lounge" loading="lazy">
+            <div class="reservation-visual-shade"></div>
+            <div class="reservation-heading">
+              <p class="eyebrow gold" data-al="REZERVIMI" data-en="RESERVATIONS">REZERVIMI</p>
+              <h2><span data-al="Rezervo tavolinën" data-en="Reserve your table">Rezervo tavolinën</span><span data-al="tënde në Solé." data-en="at Solé.">tënde në Solé.</span></h2>
+              <p data-al="Një mbrëmje pranë detit, e rezervuar në pak hapa." data-en="An evening by the sea, reserved in just a few steps.">Një mbrëmje pranë detit, e rezervuar në pak hapa.</p>
             </div>
-            <label><span data-al="Numri i personave" data-en="Number of guests">Numri i personave</span><input name="guests" type="number" min="1" max="30" required></label>
-            <label><span data-al="Preferenca e tavolinës" data-en="Seating preference">Preferenca e tavolinës</span><select name="preference"><option value="Pa preferencë" data-al="Pa preferencë" data-en="No preference">Pa preferencë</option><option value="Ambient lounge" data-al="Ambient lounge" data-en="Lounge area">Ambient lounge</option><option value="Pranë pamjes së detit" data-al="Pranë pamjes së detit" data-en="Near the sea view">Pranë pamjes së detit</option><option value="Ambient i brendshëm" data-al="Ambient i brendshëm" data-en="Indoor area">Ambient i brendshëm</option></select></label>
-            <label><span data-al="Mesazhi" data-en="Message">Mesazhi</span><textarea name="message" rows="4"></textarea></label>
-            <button class="btn btn-gold btn-full" type="submit" data-al="Dërgo kërkesën në WhatsApp" data-en="Send request on WhatsApp">Dërgo kërkesën në WhatsApp</button>
-            <p class="form-status" id="formStatus" aria-live="polite"></p>
-          </form>
-          <p class="reservation-note" data-al="Rezervimi konsiderohet i konfirmuar vetëm pasi të merrni konfirmim nga Solé Lounge." data-en="The reservation is confirmed only after you receive confirmation from Solé Lounge.">Rezervimi konsiderohet i konfirmuar vetëm pasi të merrni konfirmim nga Solé Lounge.</p>
+          </div>
+
+          <div class="reservation-panel">
+            <div class="reservation-panel-intro">
+              <p class="reservation-kicker" data-al="DETAJET E REZERVIMIT" data-en="RESERVATION DETAILS">DETAJET E REZERVIMIT</p>
+              <p data-al="Plotësoni të dhënat dhe dërgojeni kërkesën direkt në WhatsApp." data-en="Enter your details and send the request directly through WhatsApp.">Plotësoni të dhënat dhe dërgojeni kërkesën direkt në WhatsApp.</p>
+            </div>
+
+            <form id="reservationForm" class="reservation-form" novalidate>
+              <label class="reservation-field">
+                <span data-al="Emri dhe mbiemri" data-en="Full name">Emri dhe mbiemri</span>
+                <input name="name" required autocomplete="name">
+              </label>
+
+              <label class="reservation-field">
+                <span data-al="Numri i telefonit" data-en="Phone number">Numri i telefonit</span>
+                <input name="phone" type="tel" required autocomplete="tel" inputmode="tel">
+              </label>
+
+              <div class="reservation-row">
+                <label class="reservation-field">
+                  <span data-al="Data" data-en="Date">Data</span>
+                  <input name="date" type="date" required>
+                </label>
+                <label class="reservation-field">
+                  <span data-al="Ora" data-en="Time">Ora</span>
+                  <input name="time" type="time" required>
+                </label>
+              </div>
+
+              <div class="reservation-row reservation-row-details">
+                <label class="reservation-field">
+                  <span data-al="Personat" data-en="Guests">Personat</span>
+                  <input name="guests" type="number" min="1" max="30" required>
+                </label>
+                <label class="reservation-field">
+                  <span data-al="Preferenca" data-en="Preference">Preferenca</span>
+                  <select name="preference">
+                    <option value="Pa preferencë" data-al="Pa preferencë" data-en="No preference">Pa preferencë</option>
+                    <option value="Ambient lounge" data-al="Ambient lounge" data-en="Lounge area">Ambient lounge</option>
+                    <option value="Pranë pamjes së detit" data-al="Pranë pamjes së detit" data-en="Near the sea view">Pranë pamjes së detit</option>
+                    <option value="Ambient i brendshëm" data-al="Ambient i brendshëm" data-en="Indoor area">Ambient i brendshëm</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="reservation-field">
+                <span data-al="Mesazhi" data-en="Message">Mesazhi</span>
+                <textarea name="message" rows="3"></textarea>
+              </label>
+
+              <button class="reservation-submit" type="submit">
+                <span data-al="Dërgo kërkesën në WhatsApp" data-en="Send request on WhatsApp">Dërgo kërkesën në WhatsApp</span>
+                <span class="reservation-submit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+                </span>
+              </button>
+              <p class="form-status" id="formStatus" aria-live="polite"></p>
+            </form>
+
+            <p class="reservation-note" data-al="Rezervimi konfirmohet vetëm pasi të merrni përgjigje nga Solé Lounge." data-en="The reservation is confirmed only after you receive a reply from Solé Lounge.">Rezervimi konfirmohet vetëm pasi të merrni përgjigje nga Solé Lounge.</p>
+          </div>
         </div>
       </div>
     </section>
