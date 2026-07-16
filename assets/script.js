@@ -5,8 +5,8 @@
 
   const menuData = {
     sharing: {
-      image: 'assets/images/ig_a1.webp',
-      alt: { al: 'Përgatitje në Solé Lounge', en: 'Preparation at Solé Lounge' },
+      image: 'assets/images/food_sharing.webp',
+      alt: { al: 'Aperitiv dhe pjata për t’u ndarë në Solé Lounge', en: 'Aperitif and sharing dishes at Solé Lounge' },
       items: [
         ['Krudo premium deti','Premium Seafood Crudo','5,000 L'],
         ['Mix djathërash dhe proshutash','Cheese & Charcuterie Board','2,500 L'],
@@ -20,8 +20,8 @@
       ]
     },
     pizza: {
-      image: 'assets/images/ig_b9.webp',
-      alt: { al: 'Atmosferë gastronomike në Solé Lounge', en: 'Dining atmosphere at Solé Lounge' },
+      image: 'assets/images/food_margherita.webp',
+      alt: { al: 'Pizza artizanale në Solé Lounge', en: 'Artisan pizza at Solé Lounge' },
       items: [
         ['Margherita','Margherita','550 L'],
         ['Proshutë','Ham Pizza','700 L'],
