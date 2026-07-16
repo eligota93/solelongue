@@ -249,35 +249,30 @@
 
     <section class="section reservation-section" id="rezervimi">
       <div class="container">
-        <div class="reservation-shell reveal">
-          <div class="reservation-visual">
-            <img src="assets/images/gallery_new1.webp" alt="Ambient për rezervime në Solé Lounge" loading="lazy">
-            <div class="reservation-visual-shade"></div>
-            <div class="reservation-heading">
+        <div class="reservation-scene reveal">
+          <img class="reservation-bg" src="assets/images/reservation_bg.webp" alt="Ambient luksoz në Solé Lounge" loading="lazy">
+          <div class="reservation-backdrop" aria-hidden="true"></div>
+
+          <div class="reservation-glass">
+            <div class="reservation-head">
               <p class="eyebrow gold" data-al="REZERVIMI" data-en="RESERVATIONS">REZERVIMI</p>
               <h2><span data-al="Rezervo tavolinën" data-en="Reserve your table">Rezervo tavolinën</span><span data-al="tënde në Solé." data-en="at Solé.">tënde në Solé.</span></h2>
-              <p data-al="Një mbrëmje pranë detit, e rezervuar në pak hapa." data-en="An evening by the sea, reserved in just a few steps.">Një mbrëmje pranë detit, e rezervuar në pak hapa.</p>
-            </div>
-          </div>
-
-          <div class="reservation-panel">
-            <div class="reservation-panel-intro">
-              <p class="reservation-kicker" data-al="DETAJET E REZERVIMIT" data-en="RESERVATION DETAILS">DETAJET E REZERVIMIT</p>
               <p data-al="Plotësoni të dhënat dhe dërgojeni kërkesën direkt në WhatsApp." data-en="Enter your details and send the request directly through WhatsApp.">Plotësoni të dhënat dhe dërgojeni kërkesën direkt në WhatsApp.</p>
             </div>
 
             <form id="reservationForm" class="reservation-form" novalidate>
-              <label class="reservation-field">
-                <span data-al="Emri dhe mbiemri" data-en="Full name">Emri dhe mbiemri</span>
-                <input name="name" required autocomplete="name">
-              </label>
+              <div class="reservation-row reservation-row-main">
+                <label class="reservation-field">
+                  <span data-al="Emri dhe mbiemri" data-en="Full name">Emri dhe mbiemri</span>
+                  <input name="name" required autocomplete="name">
+                </label>
+                <label class="reservation-field">
+                  <span data-al="Numri i telefonit" data-en="Phone number">Numri i telefonit</span>
+                  <input name="phone" type="tel" required autocomplete="tel" inputmode="tel">
+                </label>
+              </div>
 
-              <label class="reservation-field">
-                <span data-al="Numri i telefonit" data-en="Phone number">Numri i telefonit</span>
-                <input name="phone" type="tel" required autocomplete="tel" inputmode="tel">
-              </label>
-
-              <div class="reservation-row">
+              <div class="reservation-row reservation-row-date">
                 <label class="reservation-field">
                   <span data-al="Data" data-en="Date">Data</span>
                   <input name="date" type="date" required>
@@ -290,11 +285,11 @@
 
               <div class="reservation-row reservation-row-details">
                 <label class="reservation-field">
-                  <span data-al="Personat" data-en="Guests">Personat</span>
+                  <span data-al="Numri i personave" data-en="Number of guests">Numri i personave</span>
                   <input name="guests" type="number" min="1" max="30" required>
                 </label>
                 <label class="reservation-field">
-                  <span data-al="Preferenca" data-en="Preference">Preferenca</span>
+                  <span data-al="Preferenca e tavolinës" data-en="Seating preference">Preferenca e tavolinës</span>
                   <select name="preference">
                     <option value="Pa preferencë" data-al="Pa preferencë" data-en="No preference">Pa preferencë</option>
                     <option value="Ambient lounge" data-al="Ambient lounge" data-en="Lounge area">Ambient lounge</option>
@@ -304,7 +299,7 @@
                 </label>
               </div>
 
-              <label class="reservation-field">
+              <label class="reservation-field reservation-message">
                 <span data-al="Mesazhi" data-en="Message">Mesazhi</span>
                 <textarea name="message" rows="3"></textarea>
               </label>
